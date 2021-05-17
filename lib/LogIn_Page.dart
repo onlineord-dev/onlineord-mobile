@@ -101,14 +101,25 @@ class _LogInPageState extends State<LogInPage> {
                 // },
               ),
               Center(
-                child:FlatButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/LogIn/Registr');
-                  },
-                  child: Text(
-                    "Немає аккаунту? Реєстрація.",
-                  ),
-                  textColor: Colors.lightBlue,
+                child: new Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    new Text(
+                      "Немає аккаунту?",
+                    ),
+                    new MaterialButton(
+                      minWidth: 0,
+                      height: 0,
+                      padding: EdgeInsets.all(3),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/LogIn/Registr');
+                      },
+                      child: Text(
+                        "Реєстрація.",
+                      ),
+                      textColor: Colors.lightBlue,
+                    ),
+                  ],
                 ),
               ),
               Center(
